@@ -24,3 +24,26 @@ This is a simple Node.js app deployed on Kubernetes with a CI/CD pipeline using 
    ```bash
    git clone https://github.com/yourusername/your-repo.git
    cd your-repo
+   
+2. installing dependcies
+   npm install
+
+3.Run the app:
+   npm start
+
+-------------------Docker------------------------------------------------
+Build and push Docker image: 
+docker build -t yourdockerhubusername/ci-cd-app:latest .
+docker push yourdockerhubusername/ci-cd-app:latest
+
+Kubernetes Deployment--------------------------------------------
+kubectl apply -f k8s/deployment.yaml
+kubectl apply -f k8s/service.yaml
+
+CI/CD Pipeline
+GitHub Actions automates building, pushing Docker image, and deploying to Kubernetes on every push to main branch.
+
+
+
+
+
